@@ -11,6 +11,6 @@ public class DsaApplication {
 		SpringApplication.run(DsaApplication.class, args);
 
 		ArrayDSAService arrayDSAService = new ArrayDSAService();
-		arrayDSAService.duplicate();
+		arrayDSAService.findDuplicateInArray();
 	}
 }

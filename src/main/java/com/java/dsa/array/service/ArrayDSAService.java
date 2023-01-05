@@ -137,9 +137,7 @@ public class ArrayDSAService {
 
     public void duplicate(){
         int[] a = new int[]{1,2,3,4,4};
-
         int[] b = new int[a.length];
-
         for (int i = 0 ; i<a.length; i++){
             for (int j = 1; j<b.length; j++){
                 if (a[i] == b[j] && i!=j){
@@ -147,5 +145,30 @@ public class ArrayDSAService {
                 }
             }
         }
+    }
+
+    public void reverseArrayWithSwapingElements(){
+        int[] elements = new int[]{1,2,3,4,5,6};
+        int count =1;
+        for (int i = 0;i<elements.length/2;i++){
+            int buffer = elements[i];
+            elements[i]=elements[elements.length-count];
+            elements[elements.length-count]=buffer;
+            count++;
+        }
+        System.out.println(Arrays.toString(elements));
+    }
+
+    public void findDuplicateInArray(){
+        int[] elements = new int[]{1,2,1,3,4,3,5,6};
+        ArrayList<Integer> duplicateElement = new ArrayList<>();
+        for (int i = 0; i < elements.length; i++) {
+            for (int j = i+1; j < elements.length; j++) {
+                if (elements[i] == elements[j]){
+                    duplicateElement.add(elements[i]);
+                }
+            }
+        }
+        System.out.println(duplicateElement);
     }
 }
