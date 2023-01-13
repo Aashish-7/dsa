@@ -17,23 +17,6 @@ public class GarbageArrayDSAService {
         }
     }
 
-    public void primeNumber() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("enter no to check prime.");
-        int c = 0;
-        int a = scanner.nextInt();
-
-        for (int i = 2; i < a; i++) {
-            if (a % i == 0) {
-                c++;
-            }
-        }
-        if (c==0){
-            System.out.println("prime");
-        }else {
-            System.out.println("not prime");
-        }
-    }
 
     public void primeNo(){
         Scanner scanner = new Scanner(System.in);
@@ -61,6 +44,37 @@ public class GarbageArrayDSAService {
                 if (i % j != 0) {
                     count = count+i;
                     count++;
+                }
+            }
+        }
+    }
+
+    public void climbing(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter No :");
+        int n = scanner.nextInt();
+
+        int a = 1;
+        int b = a + 1;
+        int c;
+        while (n != 0){
+            c = a+b;
+            System.out.println(c);
+            b = c;
+            a = c - b;
+            System.out.println("H");
+        }
+
+    }
+
+
+    public void duplicate(){
+        int[] a = new int[]{1,2,3,4,4};
+        int[] b = new int[a.length];
+        for (int i = 0 ; i<a.length; i++){
+            for (int j = 1; j<b.length; j++){
+                if (a[i] == b[j] && i!=j){
+                    System.out.println("duplicate are " + a[i]);
                 }
             }
         }
